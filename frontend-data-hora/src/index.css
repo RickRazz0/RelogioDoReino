@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=MedievalSharp&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cinzel', serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.reino {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.pergaminho {
+  background: linear-gradient(135deg, #f4e4bc 0%, #e8d5a3 50%, #d4c08b 100%);
+  border: 8px solid #5d4037;
+  border-radius: 8px;
+  padding: 50px 40px;
+  box-shadow:
+    0 0 0 4px #3e2723,
+    0 0 0 8px #8d6e63,
+    0 20px 60px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+}
+
+.pergaminho::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 2px solid #8d6e63;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.titulo {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 42px;
+  color: #3e2723;
+  margin-bottom: 16px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 2px;
+}
+
+.subtitulo {
+  font-size: 14px;
+  color: #5d4037;
+  margin-bottom: 24px;
+  font-style: italic;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.divisor {
+  font-size: 24px;
+  color: #8d6e63;
+  margin: 24px 0;
+  letter-spacing: 8px;
+}
+
+.carregando {
+  font-size: 18px;
+  color: #5d4037;
+  margin: 32px 0;
+  font-style: italic;
+  animation: pulsar 1.5s ease-in-out infinite;
+}
+
+@keyframes pulsar {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.conteudo {
+  margin-top: 24px;
+}
+
+.hora {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 72px;
+  color: #3e2723;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  margin-bottom: 16px;
+  letter-spacing: 4px;
+}
+
+.data {
+  font-size: 20px;
+  color: #5d4037;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.completa {
+  font-size: 14px;
+  color: #6d4c41;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 2px solid #8d6e63;
+  font-style: italic;
+}
+
+.erro {
+  margin-top: 24px;
+  padding: 20px;
+  background: #ffebee;
+  color: #b71c1c;
+  border: 3px solid #8d6e63;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.6;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+  .pergaminho {
+    padding: 30px 20px;
+  }
+
+  .titulo {
+    font-size: 28px;
+  }
+
+  .hora {
+    font-size: 48px;
+  }
+
+  .data {
+    font-size: 16px;
+  }
+}
